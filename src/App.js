@@ -58,6 +58,10 @@ function App() {
         return faFileAlt;
       case "xml":
         return faFileExcel;
+      case "xls":
+        return faFileExcel;
+      case "xlsx":
+        return faFileExcel;
       case "csv":
         return faFileCode;
       case "zip":
@@ -84,6 +88,10 @@ function App() {
         return "#388E3C";
       case "xml":
         return "#04AA6D";
+      case "xls":
+        return "#04AA6D";
+      case "xlsx":
+        return "#04AA6D";  
       case "csv":
         return "#2eff20";
       case "zip":
