@@ -8,7 +8,7 @@ import {
   faFileAlt,
   faFileImage,
   faFile,
-  faFileLines,
+  faFileExcel,faFileCode,faFileZipper
 } from "@fortawesome/free-regular-svg-icons";
 import "./App.css";
 
@@ -57,7 +57,11 @@ function App() {
       case "txt":
         return faFileAlt;
       case "xml":
-        return faFileLines;
+        return faFileExcel;
+      case "csv":
+        return faFileCode;
+      case "zip":
+        return faFileZipper;
       case "jpg":
       case "jpeg":
       case "png":
@@ -80,6 +84,10 @@ function App() {
         return "#388E3C";
       case "xml":
         return "#04AA6D";
+      case "csv":
+        return "#2eff20";
+      case "zip":
+        return "#a1a1a1";
       case "jpg":
       case "jpeg":
       case "png":
@@ -91,10 +99,13 @@ function App() {
 
   // Delete a file
   const handleDelete = (fileName) => {
-    setFiles((prevFiles) => prevFiles.filter((file) => file.name !== fileName));
-    showNotification(`File "${fileName}" has been deleted.`);
+    const confirmDelete = window.confirm(`Are you sure you want to delete the file "${fileName}"?`);
+  
+    if (confirmDelete) {
+      setFiles((prevFiles) => prevFiles.filter((file) => file.name !== fileName));
+      showNotification(`File "${fileName}" has been deleted.`);
+    }
   };
-
   return (
     <div className="App">
       <Header handleFileChange={handleFileChange} />
