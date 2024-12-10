@@ -1,0 +1,137 @@
+.App {
+  max-width: 950px;
+  margin: 20px auto;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ebebeb;
+  margin-bottom: 20px;
+  border: 1px solid #a7a7a7;
+  padding: 8px 18px;
+  border-radius: 7px;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.upload-button {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+  background-color: #45a049;
+  color: #fff;
+}
+
+.file-list {
+  margin-top: 10px;
+  padding: 8px 10px;
+  background: #fff;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  max-height: calc(100vh - 140px);
+  overflow: auto;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  margin: 5px 0;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease;
+}
+
+.file-item:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.file-details {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.file-details p {
+  margin: 2px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.delete-icon {
+  color: #000;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.text-center{
+  text-align: center;
+}
+/* Notification styling */
+.notification {
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #ffcccc;
+  color: #a10000;
+  border: 1px solid #a10000;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Update for the upload button icon alignment */
+.upload-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.upload-button:hover {
+  background-color: #45a049;
+  color: #fff;
+}
+
+.upload-button span {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .upload-button {
+    margin-top: 10px;
+  }
+
+  .file-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .delete-icon {
+    margin-top: 5px;
+  }
+}
